@@ -83,6 +83,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
     'http://frontend:5173',
+    "http://31.129.106.22:5174",
 ]
 CORS_ALLOW_CREDENTIALS = True
 
@@ -92,5 +93,6 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
     'http://frontend:5173',
+    "http://31.129.106.22:5174",
 ]
 
