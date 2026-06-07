@@ -7,7 +7,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['31.129.106.22']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -93,3 +93,4 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:5173',
     'http://frontend:5173',
 ]
+
