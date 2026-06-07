@@ -1,0 +1,202 @@
+.hero {
+  position: relative;
+  height: 480px;
+  background: url('https://images.unsplash.com/photo-1436491865332-7a61a192cc05?w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 14, 23, 0.92) 0%,
+    rgba(10, 14, 23, 0.6) 50%,
+    rgba(10, 14, 23, 0.85) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.hero-desc {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 520px;
+  font-weight: 300;
+}
+
+.fleet-chooser {
+  padding: 80px 24px;
+}
+
+.fleet-chooser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.fleet-chooser-card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.fleet-chooser-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 168, 76, 0.35);
+  box-shadow: var(--shadow);
+}
+
+.chooser-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.6;
+  margin-bottom: 12px;
+}
+
+.fleet-chooser-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.fleet-chooser-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.chooser-link {
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.fleet {
+  padding: 80px 24px;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+  font-size: 0.95rem;
+}
+
+.airplane-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 32px;
+}
+
+.airplane-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.airplane-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+.airplane-image-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.airplane-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.airplane-card:hover .airplane-image {
+  transform: scale(1.05);
+}
+
+.airplane-price-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(10, 14, 23, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--gold);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+
+.airplane-info {
+  padding: 24px;
+}
+
+.airplane-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.airplane-desc {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.airplane-btn {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    height: 360px;
+  }
+
+  .airplane-grid {
+    grid-template-columns: 1fr;
+  }
+}

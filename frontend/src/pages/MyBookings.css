@@ -1,0 +1,109 @@
+.my-bookings-page {
+  padding: 48px 0 80px;
+  min-height: calc(100vh - 72px);
+}
+
+.page-title {
+  font-size: 2.4rem;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-item {
+  display: flex;
+  gap: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.booking-item:hover {
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+.booking-item-img {
+  width: 200px;
+  min-height: 140px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.booking-item-info {
+  padding: 24px 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.booking-item-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.booking-item-date {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.booking-item-date strong {
+  color: var(--gold);
+}
+
+.booking-item-price {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .booking-item {
+    flex-direction: column;
+  }
+
+  .booking-item-img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .booking-item-info {
+    padding: 20px;
+  }
+}
